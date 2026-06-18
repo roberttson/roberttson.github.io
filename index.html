@@ -14,46 +14,41 @@
       --text: #1a1a1a;
       --muted: #888;
       --border: #e5e5e5;
-      --accent: #1a1a1a;
     }
 
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
     }
 
-    .card {
-      max-width: 720px;
-      width: 100%;
+    .layout {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 40px;
+      height: 100vh;
     }
 
     .avatar {
-      width: 440px;
-      height: 440px;
-      object-fit: contain;
+      width: 45vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
       flex-shrink: 0;
     }
 
-    .card-right {
+    .content {
+      flex: 1;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      padding: 48px 40px;
       gap: 24px;
-      flex: 1;
+      overflow-y: auto;
     }
 
     .name {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: -0.5px;
     }
@@ -61,7 +56,6 @@
     .bio {
       font-size: 0.95rem;
       color: var(--muted);
-      text-align: left;
       line-height: 1.6;
     }
 
@@ -72,7 +66,8 @@
 
     .socials {
       display: flex;
-      gap: 16px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .social-link {
@@ -107,7 +102,6 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
-      align-self: flex-start;
     }
 
     .resource-card {
@@ -146,18 +140,20 @@
     }
 
     footer {
-      margin-top: 48px;
       font-size: 0.78rem;
       color: var(--muted);
+      margin-top: 8px;
     }
+
+    footer a { color: inherit; }
   </style>
 </head>
 <body>
 
-  <div class="card">
+  <div class="layout">
     <img src="roberttson.png" alt="roberttson" class="avatar">
 
-    <div class="card-right">
+    <div class="content">
 
       <div class="name">roberttson</div>
 
@@ -186,11 +182,10 @@
         <span class="resource-arrow">→</span>
       </a>
 
+      <footer>© 2026 roberttson · <a href="https://github.com/roberttson">GitHub</a></footer>
+
     </div>
-
   </div>
-
-  <footer>© 2026 roberttson · <a href="https://github.com/roberttson" style="color:inherit">GitHub</a></footer>
 
 </body>
 </html>
