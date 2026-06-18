@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>roberttson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9f9f7;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e5e5e5;
+      --accent: #1a1a1a;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .card {
+      max-width: 480px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    .name {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .bio span {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .socials {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .social-link:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .divider {
+      width: 100%;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .resources-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      align-self: flex-start;
+    }
+
+    .resource-card {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .resource-card:hover {
+      border-color: var(--text);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .resource-info { display: flex; flex-direction: column; gap: 3px; }
+
+    .resource-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .resource-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .resource-arrow {
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="roberttson.png" alt="roberttson" class="avatar">
+
+    <div class="name">roberttson</div>
+
+    <p class="bio">
+      <span>Streamer</span> por oficio ·
+      <span>Abogado</span> de profesión ·
+      <span>Profesor</span> por vocación
+    </p>
+
+    <div class="socials">
+      <a href="https://twitch.tv/roberttson" target="_blank" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+        twitch.tv/roberttson
+      </a>
+    </div>
+
+    <hr class="divider">
+
+    <div class="resources-title">Recursos</div>
+
+    <a href="https://roberttson.github.io/cronologia-caso-hermosilla/cronologia.html" target="_blank" class="resource-card">
+      <div class="resource-info">
+        <div class="resource-name">Cronología: Caso Hermosilla</div>
+        <div class="resource-desc">101 hitos · 7 aristas · 2020–2026</div>
+      </div>
+      <span class="resource-arrow">→</span>
+    </a>
+
+  </div>
+
+  <footer>© 2026 roberttson · <a href="https://github.com/roberttson" style="color:inherit">GitHub</a></footer>
+
+</body>
+</html>
