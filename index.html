@@ -10,10 +10,11 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f9f9f7;
+      --bg: #f4f3ef;
       --text: #1a1a1a;
-      --muted: #888;
-      --border: #e5e5e5;
+      --muted: #7a7a6e;
+      --border: #dddbd2;
+      --accent: #4a6741;
     }
 
     html, body {
@@ -87,9 +88,9 @@
     }
 
     .social-link:hover {
-      background: var(--text);
+      background: var(--accent);
       color: var(--bg);
-      border-color: var(--text);
+      border-color: var(--accent);
     }
 
     .divider {
@@ -120,8 +121,8 @@
     }
 
     .resource-card:hover {
-      border-color: var(--text);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(74,103,65,0.12);
     }
 
     .resource-info { display: flex; flex-direction: column; gap: 3px; }
